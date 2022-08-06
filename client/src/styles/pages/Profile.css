@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 30%;
+}
+
+.display-name {
+  font-size: 60px;
+}
+
+.profile-stats {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.profile-stats span {
+  display: flex;
+  align-items: center;
+}
+
+.profile-stats span:not(:last-of-type)::after {
+  content: '•';
+  display: block;
+  margin: 0 15px;
+  font-size: 10px;
+}

@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const querystring = require('querystring');
+const querystring = require('query-string');
 const axios = require('axios');
 
 const app = express();
@@ -27,6 +27,7 @@ app.get('/login', (req, res) => {
   res.cookie(stateKey, state);
 
   const scope = [
+    'user-follow-read',
     'user-read-private',
     'user-read-email',
     'user-top-read',
