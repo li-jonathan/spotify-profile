@@ -8,6 +8,7 @@ import {
 import { accessToken, logout } from './spotify';
 import './App.css';
 import { Login, Profile } from './pages';
+import spotifyLogo from './utils/images/spotify-logo.png';
 
 function App() {
   const [token, setToken] = useState(null);
@@ -22,6 +23,9 @@ function App() {
         <Login />
       ) : (
         <>
+          <div className="spotify-container">
+            <img className="spotify-logo" src={spotifyLogo} alt="Spotify Logo" />
+          </div>
           <button className="logout-button" onClick={logout}>
             Log Out
           </button>

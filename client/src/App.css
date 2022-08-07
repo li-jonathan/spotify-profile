@@ -5,8 +5,18 @@
 .app {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-around;
   min-height: 100vh;
+}
+
+.spotify-container {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.spotify-logo {
+  width: 100px;
 }
 
 .logout-button {
@@ -14,7 +24,7 @@
   top: 15px;
   right: 15px;
   padding: 10px 20px 10px 20px;
-  background-color: #52b788;
+  background-color: #1DB954;
   color: white;
   border: none;
   border-radius: 12px;
@@ -24,7 +34,7 @@
 }
 
 .logout-button a {
-  background-color: #52b788;
+  background-color: #1DB954;
   color: white;
   text-decoration: none;
 }

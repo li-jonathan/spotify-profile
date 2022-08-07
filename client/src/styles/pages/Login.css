@@ -1,38 +1,36 @@
 
-.body {
-  background-color: grey;
+.login {
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
 }
 
-.logo-container {
+.login_logo-container {
   display: flex;
   justify-content: space-around;
 }
 
-.logo {
+.login_logo {
   width: 50%;
   border-radius: 50%;
 }
 
-.header {
+.login_header {
   font-size: 45px;
   font-weight: bold;
   padding: 10px;
   letter-spacing: 3px;
-
 }
 
-.button-container {
+.login_button-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.login-button {
+.login_button {
   padding: 10px 20px 10px 20px;
-  background-color: #52b788;
+  background-color: #1DB954;
   color: white;
   border: none;
   border-radius: 12px;
@@ -41,12 +39,12 @@
   cursor: pointer;
 }
 
-.login-button a {
-  background-color: #52b788;
+.login_button a {
+  background-color: #1DB954;
   color: white;
   text-decoration: none;
 }
 
-.login-button:hover {
+.login_button:hover {
   box-shadow: 0px 2px 5px black;
 }

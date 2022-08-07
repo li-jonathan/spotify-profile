@@ -1,35 +1,76 @@
-.header {
+.profile_header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
   flex-direction: column;
+  font-weight: 600;
   margin-top: 50px;
 }
 
-.profile-img {
+.profile_header img {
   border-radius: 50%;
-  width: 30%;
+  max-width: 20%;
+  height: auto;
+  z-index: 10;
 }
 
-.display-name {
+.profile_display-name {
   font-size: 60px;
 }
 
-.profile-stats {
+.profile_stats {
   display: flex;
-  align-items: center;
   font-size: 13px;
 }
 
-.profile-stats span {
+.profile_stats span {
   display: flex;
   align-items: center;
 }
 
-.profile-stats span:not(:last-of-type)::after {
+.profile_stats span:not(:last-of-type)::after {
   content: '•';
   display: block;
   margin: 0 15px;
   font-size: 10px;
+}
+
+.profile_body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.profile_section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile_section-header p {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 15px 0 15px 0;
+}
+
+.profile_section-header p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.profile_section-header button {
+  height: fit-content;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 3px 10px 3px 10px;
+}
+
+.profile_section-header button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+.profile_section {
+  margin: 20px;
+  min-width: 50%;
 }

@@ -1,0 +1,11 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.artist_index{
+  font-size: 20px;
+  position: relative;
+  top: 30px;
+  background: transparent;
+}
