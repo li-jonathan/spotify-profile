@@ -1,0 +1,13 @@
+.top-artists_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-artists_title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.top-artists_time-periods {
+  display: flex;
+}

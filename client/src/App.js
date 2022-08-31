@@ -5,10 +5,11 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { accessToken, logout } from './spotify';
+import { accessToken } from './spotify';
 import './App.css';
-import { Login, Profile } from './pages';
-import spotifyLogo from './utils/images/spotify-logo.png';
+import { Login, Profile, Artist, Track, PageNotFound, TopArtists } from "./pages";
+import { NavBar } from './components';
+
 
 function App() {
   const [token, setToken] = useState(null);
@@ -18,26 +19,24 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <>
       {!token ? (
         <Login />
       ) : (
-        <>
-          <div className="spotify-container">
-            <img className="spotify-logo" src={spotifyLogo} alt="Spotify Logo" />
-          </div>
-          <button className="logout-button" onClick={logout}>
-            Log Out
-          </button>
-
-          <Router>
+        <div className="app">
+          <NavBar />
+          <div className="app_body">
             <Routes>
-              <Route path="/" element={<Profile />} />
+              <Route path="/artist/:id" element={<Artist />} />
+              <Route path="/track/:id" element={<Track />} />
+              <Route path="/topArtists" element={<TopArtists />} />
+              <Route exact path="/" element={<Profile />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
-          </Router>
-        </>
+          </div>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

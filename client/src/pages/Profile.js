@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { catchErrors } from '../utils/utils';
 import {
   getCurrentUserProfile,
@@ -6,12 +7,14 @@ import {
   getCurrentUserPlaylists,
   getTopArtists,
   getTopTracks,
-} from "../spotify";
-import { ArtistsContainer, ArtistCard } from '../components'
+} from '../spotify';
+import { ArtistsContainer, TracksContainer } from "../components";
 
 import '../styles/pages/Profile.css';
 
 const Profile = () => {
+  const navigate = useNavigate();
+
   const [profile, setProfile] = useState(null);
   const [following, setFollowing] = useState(null);
   const [playlists, setPlaylists] = useState(null);
@@ -65,12 +68,16 @@ const Profile = () => {
           <div className="profile_body">
             <div className="profile_section">
               <div className="profile_section-header">
-                <p onClick={() => console.log("top tracks")}>
+                <Link to="/topArtists" className="profile_section-header_title">
                   Top artists this month
-                </p>
-                <button>See all</button>
+                </Link>
+                <button className="profile_section-header_button" onClick={() => navigate("/topArtists")}>
+                  See all
+                </button>
               </div>
-              {topArtists && <ArtistsContainer artists={topArtists.items.slice(0, 10)} />}
+              {topArtists && (
+                <ArtistsContainer artists={topArtists.items.slice(0, 10)} />
+              )}
             </div>
             <div className="profile_section">
               <div className="profile_section-header">
@@ -80,9 +87,7 @@ const Profile = () => {
                 <button>See all</button>
               </div>
               {topTracks && (
-                <>
-                  {topTracks.items[0].name}
-                </>
+                <TracksContainer tracks={topTracks.items.slice(0, 10)} />
               )}
             </div>
           </div>

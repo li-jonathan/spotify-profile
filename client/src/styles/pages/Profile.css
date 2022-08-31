@@ -45,25 +45,29 @@
   justify-content: space-between;
 }
 
-.profile_section-header p {
+.profile_section-header_title {
   font-size: 30px;
   font-weight: bold;
-  margin: 15px 0 15px 0;
+  margin: 15px 0 3px 0;
+  text-decoration: none;
+  color: black;
 }
 
-.profile_section-header p:hover {
+.profile_section-header_title:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-.profile_section-header button {
+.profile_section-header_button {
   height: fit-content;
   border-radius: 12px;
   border: 1px solid black;
   padding: 3px 10px 3px 10px;
+  position: relative;
+  top: 5px;
 }
 
-.profile_section-header button:hover {
+.profile_section-header_button:hover {
   background-color: black;
   color: white;
   cursor: pointer;

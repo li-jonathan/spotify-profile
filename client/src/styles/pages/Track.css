@@ -1,0 +1,45 @@
+.track_header {
+  display: flex;
+  align-items: center;
+  margin: 0 50px 0 50px;
+}
+
+.track_name {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.track_data {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.track_data-explicit {
+  border-radius: 3px;
+  width: 15px;
+  height: fit-content;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  padding: 1px;
+  margin-right: 5px;
+}
+
+
+.track_artists {
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.track_album {
+  font-size: 18px;
+}
+
+.track_audio-features {
+  display: flex;
+  flex-direction: column;
+}

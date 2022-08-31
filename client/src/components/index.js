@@ -1,2 +1,3 @@
 export { default as ArtistsContainer } from './ArtistsContainer';
-export { default as ArtistCard } from "./ArtistCard";
+export { default as TracksContainer } from "./TracksContainer";
+export { default as NavBar } from "./NavBar";

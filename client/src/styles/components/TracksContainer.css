@@ -1,0 +1,69 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.track-card {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+}
+
+.track-card:hover {
+  cursor: pointer;
+  background-color: #1DB954;
+  border-radius: 15px;
+  color: white;
+}
+
+.track-card_link {
+  text-decoration: none;
+  color: black;
+}
+
+.track-card_idx {
+  font-size: 15px;
+  width: 20px;
+  margin-right: 10px;
+  text-align: right;
+  position: relative;
+  bottom: 20px;
+  background: transparent;
+}
+
+.track-card img {
+  width: 60px;
+  height: 60px  ;
+}
+
+.track_data {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+.track_data-explicit {
+  border-radius: 3px;
+  width: 15px;
+  height: fit-content;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  padding: 1px;
+  margin-right: 5px;
+}
+
+.track_data-name {
+  font-size: 15px;
+  font-weight: bold;
+  background: transparent;
+}
+
+.track_data-artists {
+  display: flex;
+  font-size: 12 px;
+  align-items: center;
+  background-color: transparent;
+}

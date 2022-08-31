@@ -1,0 +1,22 @@
+.app_nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 20px 0 20px; 
+}
+
+.app_nav-links {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.app_nav-link {
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.app_nav-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,21 +1,25 @@
 import "../styles/components/ArtistsContainer.css";
-import ArtistCard from "./ArtistCard";
+import { Link } from 'react-router-dom';
 
 const ArtistsContainer = ({ artists }) => (
   <>
-    <div>
-      {artists && artists.length ? (
-        <>
-          {artists.map((artist, idx) => (
-            <div key={idx} className="artist_container">
-              <ArtistCard idx={idx+1} artist={artist} />
+    {artists && artists.length ? (
+      <>
+        {artists.map((artist, idx) => (
+          <Link to={`/artist/${artist.id}`} className="artist-card_link">
+            <div key={`${idx}_artist`} className="artist-card">
+              <div className="artist-card_idx">{idx + 1}</div>
+              {artist.images[0] && (
+                <img src={artist.images[0].url} alt={artist.name} />
+              )}
+              <div className="artist-card_title">{artist.name}</div>
             </div>
-          ))}
-        </>
-      ) : (
-        <p>No artists available</p>
-      )}
-    </div>
+          </Link>
+        ))}
+      </>
+    ) : (
+      <p>No artists available</p>
+    )}
   </>
 );
 
