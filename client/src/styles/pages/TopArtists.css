@@ -1,6 +1,8 @@
 .top-artists_header {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
+  margin: 25px 50px 0 50px;
 }
 
 .top-artists_title {
@@ -10,4 +12,67 @@
 
 .top-artists_time-periods {
   display: flex;
+  justify-content: space-between;
+}
+
+.top-artist_time-period_button{
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+.top-artist_time-period_button:hover {
+  cursor: pointer;
+}
+
+.top-artist_time-period_button_active{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.top-artists_body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-artists_card {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.top-artists_card_idx {
+  position: relative;
+  top: 5px;
+  right: 75px;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.top-artists_card:hover {
+  background-color: #1DB954;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.top-artists_card_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.top-artists_card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }

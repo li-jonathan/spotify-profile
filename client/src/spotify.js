@@ -99,8 +99,8 @@ export const getArtist =  artist_id  => {
   return axios.get(`/artists/${artist_id}`);
 };
 
-export const getTopArtists = (time_range = 'short_term') => {
-  return axios.get(`/me/top/artists?time_range=${time_range}`);
+export const getTopArtists = (time_range = 'short_term', limit = 50) => {
+  return axios.get(`/me/top/artists?time_range=${time_range}&limit=${limit}`);
 };
 
 export const getTrack = track_id => {

@@ -17,7 +17,7 @@ const NavBar = () => {
         <Link to="/topArtists" className="app_nav-link">
           Top Artists
         </Link>
-        <Link to="/" className="app_nav-link">
+        <Link to="/topTracks" className="app_nav-link">
           Top Tracks
         </Link>
         <button className="logout-button" onClick={logout}>

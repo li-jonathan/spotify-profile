@@ -71,7 +71,10 @@ const Profile = () => {
                 <Link to="/topArtists" className="profile_section-header_title">
                   Top artists this month
                 </Link>
-                <button className="profile_section-header_button" onClick={() => navigate("/topArtists")}>
+                <button
+                  className="profile_section-header_button"
+                  onClick={() => navigate("/topArtists")}
+                >
                   See all
                 </button>
               </div>
@@ -81,10 +84,15 @@ const Profile = () => {
             </div>
             <div className="profile_section">
               <div className="profile_section-header">
-                <p onClick={() => console.log("top tracks")}>
-                  Top tracks this month
-                </p>
-                <button>See all</button>
+                <Link to="/topTracks" className="profile_section-header_title">
+                  Top Tracks this month
+                </Link>
+                <button
+                  className="profile_section-header_button"
+                  onClick={() => navigate("/topTracks")}
+                >
+                  See all
+                </button>
               </div>
               {topTracks && (
                 <TracksContainer tracks={topTracks.items.slice(0, 10)} />
